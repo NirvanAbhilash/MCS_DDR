@@ -1,100 +1,36 @@
-clear
-clc
- 
-%%select what data needs to be imported
- 
-opts = delimitedTextImportOptions("NumVariables", 77);
- 
-opts.DataLines = [1, Inf];
-opts.Delimiter = ",";
- 
-opts.VariableNames = ["Var1", "v13220080903072850CalcuttExp", "VarName3", "VarName4", "VarName5", "VarName6", "VarName7", "VarName8", "VarName9", "VarName10", "VarName11", "VarName12", "VarName13", "VarName14", "VarName15", "VarName16", "VarName17", "VarName18", "VarName19", "VarName20", "VarName21", "VarName22", "VarName23", "VarName24", "VarName25", "VarName26", "VarName27", "VarName28", "VarName29", "VarName30", "VarName31", "VarName32", "VarName33", "VarName34", "VarName35", "VarName36", "VarName37", "VarName38", "VarName39", "VarName40", "VarName41", "VarName42", "VarName43", "VarName44", "VarName45", "VarName46", "VarName47", "VarName48", "VarName49", "VarName50", "VarName51", "VarName52", "VarName53", "VarName54", "VarName55", "VarName56", "VarName57", "VarName58", "VarName59", "VarName60", "VarName61", "VarName62", "VarName63", "VarName64", "VarName65", "VarName66", "VarName67", "VarName68", "VarName69", "VarName70", "VarName71", "VarName72", "VarName73", "VarName74", "VarName75", "VarName76", "VarName77"];
-opts.SelectedVariableNames = ["v13220080903072850CalcuttExp", "VarName3", "VarName4", "VarName5", "VarName6", "VarName7", "VarName8", "VarName9", "VarName10", "VarName11", "VarName12", "VarName13", "VarName14", "VarName15", "VarName16", "VarName17", "VarName18", "VarName19", "VarName20", "VarName21", "VarName22", "VarName23", "VarName24", "VarName25", "VarName26", "VarName27", "VarName28", "VarName29", "VarName30", "VarName31", "VarName32", "VarName33", "VarName34", "VarName35", "VarName36", "VarName37", "VarName38", "VarName39", "VarName40", "VarName41", "VarName42", "VarName43", "VarName44", "VarName45", "VarName46", "VarName47", "VarName48", "VarName49", "VarName50", "VarName51", "VarName52", "VarName53", "VarName54", "VarName55", "VarName56", "VarName57", "VarName58", "VarName59", "VarName60", "VarName61", "VarName62", "VarName63", "VarName64", "VarName65", "VarName66", "VarName67", "VarName68", "VarName69", "VarName70", "VarName71", "VarName72", "VarName73", "VarName74", "VarName75", "VarName76", "VarName77"];
-opts.VariableTypes = ["string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string", "string"];
- 
-opts.ExtraColumnsRule = "ignore";
-opts.EmptyLineRule = "read";
- 
-opts = setvaropts(opts, ["Var1", "v13220080903072850CalcuttExp", "VarName3", "VarName4", "VarName5", "VarName6", "VarName7", "VarName8", "VarName9", "VarName10", "VarName11", "VarName12", "VarName13", "VarName14", "VarName15", "VarName16", "VarName17", "VarName18", "VarName19", "VarName20", "VarName21", "VarName22", "VarName23", "VarName24", "VarName25", "VarName26", "VarName27", "VarName28", "VarName29", "VarName30", "VarName31", "VarName32", "VarName33", "VarName34", "VarName35", "VarName36", "VarName37", "VarName38", "VarName39", "VarName40", "VarName41", "VarName42", "VarName43", "VarName44", "VarName45", "VarName46", "VarName47", "VarName48", "VarName49", "VarName50", "VarName51", "VarName52", "VarName53", "VarName54", "VarName55", "VarName56", "VarName57", "VarName58", "VarName59", "VarName60", "VarName61", "VarName62", "VarName63", "VarName64", "VarName65", "VarName66", "VarName67", "VarName68", "VarName69", "VarName70", "VarName71", "VarName72", "VarName73", "VarName74", "VarName75", "VarName76", "VarName77"], "WhitespaceRule", "preserve");
-opts = setvaropts(opts, ["Var1", "v13220080903072850CalcuttExp", "VarName3", "VarName4", "VarName5", "VarName6", "VarName7", "VarName8", "VarName9", "VarName10", "VarName11", "VarName12", "VarName13", "VarName14", "VarName15", "VarName16", "VarName17", "VarName18", "VarName19", "VarName20", "VarName21", "VarName22", "VarName23", "VarName24", "VarName25", "VarName26", "VarName27", "VarName28", "VarName29", "VarName30", "VarName31", "VarName32", "VarName33", "VarName34", "VarName35", "VarName36", "VarName37", "VarName38", "VarName39", "VarName40", "VarName41", "VarName42", "VarName43", "VarName44", "VarName45", "VarName46", "VarName47", "VarName48", "VarName49", "VarName50", "VarName51", "VarName52", "VarName53", "VarName54", "VarName55", "VarName56", "VarName57", "VarName58", "VarName59", "VarName60", "VarName61", "VarName62", "VarName63", "VarName64", "VarName65", "VarName66", "VarName67", "VarName68", "VarName69", "VarName70", "VarName71", "VarName72", "VarName73", "VarName74", "VarName75", "VarName76", "VarName77"], "EmptyFieldRule", "auto");
- 
-%%concatenate files and read data from it
-file=dir('*.tab');
-num=length(file);
- 
-conc_data=[];
-sizen=[];
-sizen1=[];
-size0=0;
-for i=1:num
-  conc_data=[conc_data;readtable(file(i).name, opts)];
-  size0=size0+size(readtable(file(i).name, opts));
-  sizen=[sizen;size0];
-  sizen1=[sizen1;size(readtable(file(i).name, opts))];
-end
- 
- sizeall=size(conc_data);
- 
- 
-dd1 = table2array(conc_data);
-ans1= find(strcmp(dd1(:,1),"         Pres"));
-ans1=ans1+1;
- 
-loopsize=size(ans1);
- 
-newdata1=[];
-for x=1:loopsize(1,1)
-   newdata1=[newdata1; conc_data(ans1(x):sizen(x),:)];
-end
- 
-%%read the required data from the datafile
-DDR = table2array(newdata1);
-DDR0=str2double(DDR);
-lengthData=size(DDR0);
-DDR1=DDR0(2:lengthData(1,1),:); 
- 
-index1 = find(isnan(DDR1(:,1)));
-le= length(index1);
-ddrle0 = length(DDR0);
-ddrle = length(DDR1);
- 
-for i=1:ddrle
-    for j=1:76
-        if(DDR1(i,j)== -9999)
-            DDR1(i,j)= nan;
-        end
-    end
-end
- 
-for i=1:ddrle
-    for j=1:76
-        if(DDR0(i,j)== -9999)
-            DDR0(i,j)= nan;
-        end
-    end
-end
- 
- 
- 
+
+%Directly copy this code and run with
+%Reading_Multiple_DDR_files_automatic.m or run separatly
+
+%DDR0=readarray('path');
+%DDR1=readarray('path');
+
+%some variable are not nesseary edit by your use
 STEMP=DDR0(:,21);
 NTEMP=DDR0(:,23);
 proflat=DDR0(:,12);
 proflon=DDR0(:,13);
 latnew1 = DDR0(:,12) ;
 longnew1 = DDR0(:,13);
- 
+
 coldspotdata=[];     
 latlon=[];
 c=0;
 ak=0;
- 
+
+%running loop to extract details of each limb profiles in DDR
+
 for i=1:le
     
     data=[];
     temp1=[];
     height=[];
     
+    %This line is necessary to extract each limb data as data are in
+    %arithmetic progression.
     data=DDR1((1+(i-1)*106):((i*106)-1),:) ;
+    
+    
     date=DDR((1+(i-1)*106),1);
     time=DDR((1+(i-1)*106),2);
     ls=DDR((1+(i-1)*106),4);
@@ -105,7 +41,7 @@ for i=1:le
     index=find(isnan(data(:,13)));
     length1= length(index);
     
-    
+    %For Tiles (Tile 1 section) , no necessary edit by user preferences.
     filename1=sprintf('TempProf_img%d.png',i);
     filenamec=sprintf('TempProf_coldspot%d.txt',i);
     filename1c=sprintf('coldspot_profile_img%d.jpg',i);
@@ -119,12 +55,13 @@ for i=1:le
     lat=[];
     long=[];
     
+    %not necessary code
     %%for m=1:105
     %%lat= [lat,(data(m,13))/ 10^floor(log10(data(m,13)))];
     %%long= [long,(data(m,14))/ 10^floor(log10(data(m,14)))];
     %%end
     
-    
+    % not necssary, seting up to read lat and lon in header value.
     a=data(length1+1,13);
     b=data(105,13);
     oa=data(length1+1,14);
@@ -144,7 +81,7 @@ for i=1:le
     oas=""+oa1;
     obs=""+ob1;
     
-    
+    %not necssary tile section
     titlenameLat="Latitude : "+ as+" .N"+" to "+bs+" .N";
     titlenameLong="Longitude : " + oas+ " to " +obs;
     
@@ -169,6 +106,11 @@ for i=1:le
     dustmean=nanmean(dust);
     icemean=nanmean(ice);
     tempmean=nanmean(temp1);
+    
+    % This section below down till commented is used to plot weather
+    % variables in each limb profile, edit by user specification
+    
+    %START1
     
     %dlmwrite(filename, data, 'delimiter','\t','newline','pc','precision',15);
     
@@ -204,10 +146,17 @@ for i=1:le
     %saveas(gcf,filenameDel)
    % hold off
    
+   % END1
+   
+   
     xc=[];
     lxc=[];
     
+    %Not necessary condition statement loop find conditonal filtered data
+    %in each limb profile (I used for finding cold spot regions for which conditions provided)
+    
     for j=1:105
+        %cold spot region condition
         if((data(j,2)-data(j,3))<=(((height(j,1)-30)*(-5/6))+120) && data(j,12)<=40.0000 && data(j,12)>=5.0000 && STEMP((1+(i-1)*106),1)<140.00)
             dlmwrite(filenamec, data, 'delimiter','\t','newline','pc','precision',15);
             xc=[i c (data(j,2)-data(j,3)) ((data(j,4))*610)/(data(j,1)) ((data(j,8))*610)/(data(j,1)) data(j,12) data(j,13) data(j,14) STEMP((1+(i-1)*106),1) NTEMP((1+(i-1)*106),1) latnew1((1+(i-1)*106),1) longnew1((1+(i-1)*106),1) loT_num ls0];
@@ -238,7 +187,7 @@ for i=1:le
             %plot((temp1-(((height-30)*(-5/6))+120)),height,'.--')
             %ylim([0 40])
             %hold on
-           % plot(0,height,'.--')
+            % plot(0,height,'.--')
             %hold off
             %title("Difference from CO2 frost point")
             subplot(2,2,4)
@@ -254,7 +203,6 @@ for i=1:le
             t.FontSize = 10;
             
             saveas(gcf,filename1c)
-            
         end
     end
     c=c+1;
@@ -263,11 +211,16 @@ latlonM=unique(latlon,'rows');
 dlmwrite(filename0, coldspotdata, 'delimiter','\t','newline','pc','precision',15);
 dlmwrite(filenameLL, latlonM, 'delimiter','\t','newline','pc','precision',15);
 X=coldspotdata;
+
+%helps in creating a primodial unique data points that can used to create
+%gridded data
+
 mat = cell2mat(cellfun(@(V)accumarray(X(:,1),V,[],@mean),num2cell(X,1),'UniformOutput',false))
 ans=find(mat(:,1)~=0);
 newcold=mat(ans,:);
 dlmwrite("NewCold012.txt", newcold, 'delimiter','\t','newline','pc','precision',15);
- 
+
+%plots
 figure(3)
 scatter(newcold(:,3),newcold(:,6),'*')
 %ylim([0 30])
@@ -293,7 +246,6 @@ hold on
 scatter(newcold(:,13),newcold(:,9),'*')
 title("ColdSpot(Temp) vs Local time M33 ~ls 201")
 saveas(gcf,"ColdSpotvsLocalTime.png")
- 
 %%
 %griding the data
 %B=targeted path file like in above it is "NewCold012.txt"
@@ -308,5 +260,6 @@ y=[B(:,11) B(:,12)]
 
 [x2,y2]=meshgrid(lon2(1:556),latt(1:556));
 [xi2,yi2,t12]=griddata(lon2,latt,stemp,x2,y2);
-
+ 
+ 
 
